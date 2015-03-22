@@ -211,8 +211,8 @@ if has("autocmd")
 
   augroup xmpfilter
     autocmd!
-    autocmd FileType ruby nmap <buffer> <C-m> <Plug>(xmpfilter-mark)
-    autocmd FileType ruby nmap <buffer> <C-r> <Plug>(xmpfilter-run)
+    autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
+    autocmd FileType ruby nmap <buffer> <D-r> <Plug>(xmpfilter-run)
   augroup END
 
   augroup markdown

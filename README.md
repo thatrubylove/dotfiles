@@ -36,12 +36,37 @@ Knowing what directory you are in is vital. Knowing what git branch you are in i
 
 Your prompt will look like this when you are in a git directory and the tree is clean:
 
-Your prompt will change as you edit files and forget to commit. I will go from green:
+It will look like this when your tree is *dirty*
 
-To yellow after 10 minutes:
+### Stop using rvm and rbenv
 
-And to red after 20 minutes:
+Uninstall RVM and rbenv. Do it now cavewomen and cavemen. This will install chruby with is much_better. It doesn't mess with your paths and I added some yummy goodness... Check out the link to chruby above to see why.
 
+### No mas bundle exec, gemsets, or system gem collisions!
+
+This setup includes an alias for bundling gems with binstubs (no bundle exec crap) in the local directory you are in. It will automatically be at the front of your path, so cd into your ruby app with a gemfile, then.....
+
+```bash
+b
+Fetching gem metadata from https://rubygems.org/. ........
+Fetching version metadata from https://rubygems.org/..
+.....
+```
+
+Yes, you bundle by just typing b... did I mention I am a lazy bastard?
+
+### More cool aliases:
+
+Want to see your aliases? In any unix based system just type *alias* and it will print them out. With this you get even more access!!!
+
+When you type *aliases* and hit return it opens you aliases in vim!
+
+
+### Vim goodness
+
+Vim is configured to actually be useful here, and without installing bloated things like janus that will run slow as mucky muck. fuck the mucky muck.
+
+Even cooler is when you want to edit your vimrc file you just type *,v* in vim and it will open it. Close your vimrc with a write and it will reload it in vim!
 
 ## Installation
 

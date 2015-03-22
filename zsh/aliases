@@ -12,7 +12,7 @@ alias asu="cd ~/code/rails/activesupport"
 alias aliases='vim ~/dotfiles/zsh/aliases'
 alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias bu='bundle update'
-alias c='cd'
+alias c='clear'
 alias d='cd ~/dotfiles'
 alias dr='cd ~/Dropbox'
 alias drop='cd ~/Dropbox'
@@ -37,6 +37,7 @@ alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias rc='rails console'
 alias rdm="be rake db:migrate"
+alias rl='cd ~/development/rubylove'
 alias squash='git rebase -i master'
 alias sa='source ~/dotfiles/zsh/aliases'
 alias sz='source ~/dotfiles/zshrc'

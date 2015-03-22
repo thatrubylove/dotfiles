@@ -20,3 +20,6 @@ source /usr/local/share/chruby/auto.sh       # autoswitch with .ruby-version fil
 
 export PATH=/usr/local/bin:$PATH             # homebrew/user installs
 export PATH=./.bundle/bin:$PATH              # directory scoped gems
+export PATH=./bin:$PATH                      # local directory bin
+
+
