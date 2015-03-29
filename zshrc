@@ -9,7 +9,7 @@ SAVEHIST=20000
 HISTFILE=~/.zsh_history
 
 autoload -U compinit
-compinit
+compinit -u
 
 source $HOME/dotfiles/zsh/aliases            # aliases
 source $HOME/dotfiles/zsh/functions          # functions
