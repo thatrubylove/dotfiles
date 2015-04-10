@@ -1,30 +1,30 @@
 [user]
-	name = Jim O'Kelly (rubylove.io)
-	email = thatrubylove@gmail.com 
+  name = Jim O'Kelly (rubycasts.io)
+  email = thatrubylove@gmail.com 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 
 [color "diff"]
-        meta = yellow 
+  meta = yellow 
 
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim --noplugin
+  excludesfile = ~/.gitignore
+  editor = vim --noplugin
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [branch]
-	autosetupmerge = true
-        autosetuprebase = always
+  autosetupmerge = true
+  autosetuprebase = always
 [push]
-	default = current
+  default = current
 [rerere]
-	enabled = 1
+  enabled = 1
 [github]
-	user = thatrubylove
+  user = thatrubylove
 [merge]
-        ff = only
+  ff = only

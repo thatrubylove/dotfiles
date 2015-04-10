@@ -7,6 +7,7 @@ chpwd() {
 HISTSIZE=20000
 SAVEHIST=20000
 HISTFILE=~/.zsh_history
+HISTTIMEFORMAT="%h %d %H:%M:%S "
 
 autoload -U compinit
 compinit -u

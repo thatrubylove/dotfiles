@@ -33,11 +33,13 @@ alias gpr='git pull --rebase'
 alias gs='git status'
 alias hpush='git push heroku'
 alias killruby='killall -9 ruby'
+alias rblc='cd ~/development/rubylove/rubylovecasts/'
 alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias rc='rails console'
 alias rdm="be rake db:migrate"
 alias rl='cd ~/development/rubylove'
+alias rc='cd ~/development/rubycasts.io'
 alias squash='git rebase -i master'
 alias sa='source ~/dotfiles/zsh/aliases'
 alias sz='source ~/dotfiles/zshrc'

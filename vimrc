@@ -12,12 +12,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
+Plugin 'mhinz/vim-startify'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
+Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'godlygeek/tabular'
@@ -219,5 +221,20 @@ if has("autocmd")
     au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
     autocmd FileType markdown set wrap linebreak nolist
   augroup END
+
+  "" STARTIFY
+  let g:startify_bookmarks = []
+  let g:startify_files_number = 0
+  let g:startify_session_persistence = 0
+  let g:startify_change_to_dir = 1
+  let g:startify_custom_header = [
+            \ '',
+            \ '                              ___ _   _ _____   _____   _   ___ _____ ___      ',
+            \ '                             | _ \ | | | _ ) \ / / __| /_\ / __|_   _/ __|     ',
+            \ '                             |   / |_| | _ \\ V / (__ / _ \\__ \ | | \__ \     ',
+            \ '                             |_|_\\___/|___/ |_| \___/_/ \_\___/ |_| |___/     ',
+            \ '',
+            \ ]
+
 
 endif " has("autocmd")
