@@ -1,3 +1,7 @@
+# Brought to you from the people behind www.rubycasts.io
+
+Check out these awesome [ruby and rails screencasts](https://www.rubycasts.io)! There is 1 15 minute cast released every week as well as either a 2 Minute Ruby or a 2 Minute Rails screencast!
+
 # The Rubylove Dotfiles
 
 I have a confession to make. I am a thief. I steal great ideas and source code and make it my own. Want to know who I have been influenced by and stolen from? Check out my extensive thank you in my [ruby manifesto](https://github.com/rubylove/ruby_programming_manifesto).

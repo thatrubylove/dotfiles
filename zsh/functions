@@ -12,11 +12,6 @@ function git-done {
   killruby ; spring stop ; git checkout master && git merge $branch --ff-only && bundle install && rake db:migrate db:test:prepare && rake && git push && git branch -D $branch && git push origin :$branch
 }
 
-function git-nuke {
-  git branch -D $1 && git push origin :$1
-}
-compdef _git git-nuke=git-checkout
-
 function git-on-master {
   branch=`git_branch_name`
   git checkout master && git pull --rebase 

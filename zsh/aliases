@@ -6,9 +6,7 @@ elif [[ $platform == 'Darwin' ]]; then
   alias a='ls -lrthG'
 fi
 
-alias ack='ag'
 alias amend="git commit --amend"
-alias asu="cd ~/code/rails/activesupport"
 alias aliases='vim ~/dotfiles/zsh/aliases'
 alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias bu='bundle update'
@@ -22,25 +20,21 @@ alias gca='git commit --amend --no-edit'
 alias gcl='git clone'
 alias gc="git commit -m"
 alias gco='git checkout'
+alias gb='git branch'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdm='git diff master'
-alias get='sudo apt-get install'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push'
 alias gpf='git push -f'
-alias gpr='git pull --rebase'
+alias gr='git rebase'
 alias gs='git status'
 alias hpush='git push heroku'
 alias killruby='killall -9 ruby'
-alias rblc='cd ~/development/rubylove/rubylovecasts/'
-alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias rc='rails console'
 alias rdm="be rake db:migrate"
-alias rl='cd ~/development/rubylove'
 alias rc='cd ~/development/rubycasts.io'
-alias squash='git rebase -i master'
 alias sa='source ~/dotfiles/zsh/aliases'
 alias sz='source ~/dotfiles/zshrc'
 alias u='cd ..'

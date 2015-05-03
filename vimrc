@@ -35,11 +35,9 @@ filetype plugin indent on    " required
 " Use the colorscheme from above
 colorscheme jellybeans
 
-" ========================================================================
-" Ruby stuff
-" ========================================================================
 syntax on                 " Enable syntax highlighting
 
+set shell=zsh       " zshrs
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set mouse=""
 set history=500		" keep 500 lines of command line history
@@ -80,7 +78,7 @@ imap <c-a> <c-o>^
 nmap <silent> <leader>v :sp $MYVIMRC<CR>
 
 " simple load nerdtree
-nmap <silent> <leader>nt :NERDTreeToggle<CR>
+nmap <silent> <leader>d :NERDTreeToggle<CR>
 
 " simple load rails server
 nmap <silent> <leader>rs :!rails s<CR>
@@ -108,6 +106,13 @@ highlight StatusLine ctermfg=blue ctermbg=yellow
 
 " Format xml files
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
+augroup prewrites
+  autocmd!
+  " Remove trailing whitespace on save for ruby files.
+  au BufWritePre *.rb :%s/\s\+$//e
+
+augroup END 
 
 set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 
@@ -182,8 +187,6 @@ if has("autocmd")
   " Don't go past 100 chars on levelup:
   autocmd BufNewFile,BufRead /Users/ben/code/levelup/*.rb set colorcolumn=100
 
-  " Remove trailing whitespace on save for ruby files.
-  au BufWritePre *.rb :%s/\s\+$//e
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
