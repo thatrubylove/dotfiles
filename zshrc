@@ -23,3 +23,4 @@ export PATH=/usr/local/bin:$PATH             # homebrew/user installs
 export PATH=./.bundle/bin:$PATH              # directory scoped gems
 export PATH=./bin:$PATH                      # local directory bin
 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/include

@@ -6,7 +6,6 @@ elif [[ $platform == 'Darwin' ]]; then
   alias a='ls -lrthG'
 fi
 
-alias amend="git commit --amend"
 alias aliases='vim ~/dotfiles/zsh/aliases'
 alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias bu='bundle update'
@@ -15,6 +14,7 @@ alias d='cd ~/dotfiles'
 alias dr='cd ~/Dropbox'
 alias drop='cd ~/Dropbox'
 alias dev='cd ~/development'
+alias ga="git commit --amend"
 alias gap='git add --all -p'
 alias gca='git commit --amend --no-edit'
 alias gcl='git clone'
@@ -29,15 +29,19 @@ alias gp='git push'
 alias gpf='git push -f'
 alias gr='git rebase'
 alias gs='git status'
-alias hpush='git push heroku'
 alias killruby='killall -9 ruby'
-alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
+alias phs='open -b "com.adobe.Photoshop"'
 alias rc='rails console'
 alias rdm="be rake db:migrate"
-alias rc='cd ~/development/rubycasts.io'
+alias r="dev;cd rubymentor"
 alias sa='source ~/dotfiles/zsh/aliases'
 alias sz='source ~/dotfiles/zshrc'
 alias u='cd ..'
 alias v='vim'
 alias vi='vim'
+alias ws="ruby -run -e httpd . -p 4200"
 
+betwixt() {
+  sed -n -e "$1,$2 p" -e "$2 q" $3
+}
+alias btw=betwixt

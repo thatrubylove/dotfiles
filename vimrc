@@ -1,3 +1,11 @@
+" ###
+" Much of this was stolen from awesome people who stole it. Many thanks
+" to the giants whos shoulders I stand upon.
+"   * Gary Bernhardt
+"   * Ben Orenstein
+"   * Jim Weirich
+"   * Phil Cohen
+" ###
 " ========================================================================
 " Vundle stuff
 " ========================================================================
@@ -12,18 +20,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
-Plugin 'mhinz/vim-startify'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ervandew/supertab'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'        " Project Drawer
+Plugin 'ervandew/supertab'          " Tab completion
+Plugin 'tpope/vim-bundler'          " Gemfiles
+Plugin 'kien/ctrlp.vim'             " Fuzzy finder
+Plugin 'godlygeek/tabular'          " Align text
+
+" Syntax
+Plugin 'kchmck/vim-coffee-script'   " Coffeescript
+Plugin 'tpope/vim-rails'            " Rails
+Plugin 'vim-ruby/vim-ruby'          " Ruby
+Plugin 'plasticboy/vim-markdown'    " Markdown
+Plugin 'wookiehangover/jshint.vim'  " Javascript
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -37,7 +45,7 @@ colorscheme jellybeans
 
 syntax on                 " Enable syntax highlighting
 
-set shell=zsh       " zshrs
+set shell=zsh
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set mouse=""
 set history=500		" keep 500 lines of command line history
@@ -60,9 +68,19 @@ set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
 set relativenumber
+set number
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
 set bg=light
+
+" bernhardt love
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 
 " Enable built-in matchit plugin
 runtime macros/matchit.vim
@@ -216,28 +234,13 @@ if has("autocmd")
 
   augroup xmpfilter
     autocmd!
-    autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
-    autocmd FileType ruby nmap <buffer> <D-r> <Plug>(xmpfilter-run)
+    autocmd FileType ruby nmap <buffer> <D-M> <Plug>(xmpfilter-mark)
+    autocmd FileType ruby nmap <buffer> <D-R> <Plug>(xmpfilter-run)
   augroup END
 
   augroup markdown
     au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
     autocmd FileType markdown set wrap linebreak nolist
   augroup END
-
-  "" STARTIFY
-  let g:startify_bookmarks = []
-  let g:startify_files_number = 0
-  let g:startify_session_persistence = 0
-  let g:startify_change_to_dir = 1
-  let g:startify_custom_header = [
-            \ '',
-            \ '                              ___ _   _ _____   _____   _   ___ _____ ___      ',
-            \ '                             | _ \ | | | _ ) \ / / __| /_\ / __|_   _/ __|     ',
-            \ '                             |   / |_| | _ \\ V / (__ / _ \\__ \ | | \__ \     ',
-            \ '                             |_|_\\___/|___/ |_| \___/_/ \_\___/ |_| |___/     ',
-            \ '',
-            \ ]
-
 
 endif " has("autocmd")
