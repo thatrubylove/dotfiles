@@ -25,13 +25,18 @@ Plugin 'ervandew/supertab'          " Tab completion
 Plugin 'tpope/vim-bundler'          " Gemfiles
 Plugin 'kien/ctrlp.vim'             " Fuzzy finder
 Plugin 'godlygeek/tabular'          " Align text
+Plugin 'vim-scripts/loremipsum'     " Lorem ipsum
 
 " Syntax
+Plugin 'mattn/emmet-vim'            " html/css
 Plugin 'kchmck/vim-coffee-script'   " Coffeescript
 Plugin 'tpope/vim-rails'            " Rails
 Plugin 'vim-ruby/vim-ruby'          " Ruby
 Plugin 'plasticboy/vim-markdown'    " Markdown
-Plugin 'wookiehangover/jshint.vim'  " Javascript
+Plugin 'eslint/eslint'              " E6
+Plugin 'dsawardekar/ember.vim'      " Emberjs
+Plugin 'mustache/vim-mustache-handlebars' " Handlebars
+Plugin 'rust-lang/rust.vim'         " rustlang
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -88,6 +93,14 @@ runtime macros/matchit.vim
 
 let mapleader = ","
 
+" Toggle spell checking on and off with `,s`
+nmap <silent> <leader>sp :set spell!<CR>
+
+" Set region to British English
+set spelllang=en_us
+
+let g:user_emmet_leader_key='<tab>'
+
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
@@ -129,6 +142,7 @@ augroup prewrites
   autocmd!
   " Remove trailing whitespace on save for ruby files.
   au BufWritePre *.rb :%s/\s\+$//e
+  au BufReadPost *.hbs set syntax=html
 
 augroup END 
 
@@ -161,9 +175,6 @@ set ttimeout
 set ttimeoutlen=1
 
 inoremap <Tab> <C-P>
-
-let g:CommandTMaxHeight=50
-let g:CommandTMatchWindowAtTop=1
 
 " Don't wait so long for the next keypress (particularly in ambigious Leader
 " situations.
@@ -224,9 +235,9 @@ if has("autocmd")
     " Clear old autocmds in group
     autocmd!
     " autoindent with two spaces, always expand tabs
-    autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
-    autocmd FileType ruby,eruby,yaml setlocal path+=lib
-    autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80
+    autocmd FileType rust,ruby,eruby,yaml setlocal ai sw=2 sts=2 et
+    autocmd FileType rust,ruby,eruby,yaml setlocal path+=lib
+    autocmd FileType rust,ruby,eruby,yaml setlocal colorcolumn=80
     " Make ?s part of words
     autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
 

@@ -30,6 +30,7 @@ alias gpf='git push -f'
 alias gr='git rebase'
 alias gs='git status'
 alias killruby='killall -9 ruby'
+alias learn='cd ~/learn'
 alias phs='open -b "com.adobe.Photoshop"'
 alias rc='rails console'
 alias rdm="be rake db:migrate"
@@ -40,6 +41,7 @@ alias u='cd ..'
 alias v='vim'
 alias vi='vim'
 alias ws="ruby -run -e httpd . -p 4200"
+alias ods="dev;cd onlinedevschool"
 
 betwixt() {
   sed -n -e "$1,$2 p" -e "$2 q" $3

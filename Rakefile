@@ -13,6 +13,7 @@ task :default do
   install_vim_plugins
   install_chruby
   install_mri
+  make_tmp
 end
 
 def delete_file(file)
@@ -25,9 +26,12 @@ def link_file(file)
   `ln -s "$PWD/#{file}" "$HOME/.#{file}"`
 end
 
+def make_tmp
+  `mkdir ~/.tmp`
+end
+
 def use_zsh
   print 'switching shells to zsh'
-  print ' (skipping)\n' && return if `echo $0` != ''
   `brew install zsh`
   `chsh -s $(which zsh)`
 end
