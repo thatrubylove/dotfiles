@@ -2,13 +2,13 @@ require 'rake'
 
 desc "install the dot files into user's home directory"
 task :default do
-  use_zsh
   Dir['*'].each do |file|
     next if %w[README.md Rakefile].include? file
     delete_file(file) 
     link_file(file)
   end
   install_homebrew
+  use_zsh
   install_vim
   install_vim_plugins
   install_chruby
