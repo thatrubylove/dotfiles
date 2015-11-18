@@ -80,6 +80,10 @@ Installation is easy. Clone, cd, rake, profit.
 cd && git clone https://github.com/thatrubylove/dotfiles.git && cd ~/dotfiles && rake
 ```
 
+## Please Note
+
+You need to go into your `gitconfig` file and under `[user]` change your `name` and `email`. Then go down to bottom of file, and change your `[github]` username to reflect your GitHub user name. 
+
 ## Rubylove Blog
 
 http://rubylove.io
