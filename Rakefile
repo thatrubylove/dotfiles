@@ -8,11 +8,11 @@ task :default do
     link_file(file)
   end
   install_homebrew
-  use_zsh
   install_vim
   install_vim_plugins
   install_chruby
   install_mri
+  use_zsh
   make_tmp
 end
 
