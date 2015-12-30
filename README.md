@@ -1,4 +1,4 @@
-# Brought to you from the people behind www.rubycasts.io
+# Dotfiles for by [Devschool's online coding bootcamp](https://devschool.rocks)
 
 Check out these awesome [ruby and rails screencasts](https://www.rubycasts.io)! There is 1 15 minute cast released every week as well as either a 2 Minute Ruby or a 2 Minute Rails screencast!
 
@@ -84,6 +84,3 @@ cd && git clone https://github.com/thatrubylove/dotfiles.git && cd ~/dotfiles &&
 
 You need to go into your `gitconfig` file and under `[user]` change your `name` and `email`. Then go down to bottom of file, and change your `[github]` username to reflect your GitHub user name. 
 
-## Rubylove Blog
-
-http://rubylove.io
